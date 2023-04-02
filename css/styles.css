@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0; }
+
+html {
+  font-size: 65%; }
+
+::placeholder {
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", "sans-serif";
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.3); }
+
+body {
+  background-color: white;
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", "sans-serif";
+  font-weight: 500;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; }
+
+.cards {
+  background-image: url(../assets/bg-main-mobile.png);
+  width: 100%;
+  padding: 3rem 2rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50vh; }
+  .cards .back-card {
+    width: 85%;
+    border-radius: 1.2rem;
+    position: relative;
+    transform: translateX(5rem); }
+    .cards .back-card img {
+      width: 100%; }
+    .cards .back-card p {
+      color: white;
+      position: absolute;
+      top: 6.7rem;
+      right: 3.2rem;
+      font-size: 1rem; }
+  .cards .front-card {
+    width: 85%;
+    border-radius: 1.2rem;
+    position: relative;
+    transform: translateY(-7rem);
+    overflow-y: hidden;
+    position: relative;
+    background-color: none;
+    box-shadow: 5px 8px 30px rgba(0, 0, 0, 0.2); }
+    .cards .front-card img {
+      width: 100%; }
+    .cards .front-card #logo {
+      width: 20%;
+      position: absolute;
+      top: 1.8rem;
+      left: 1.9rem; }
+    .cards .front-card .nums {
+      color: white;
+      position: absolute;
+      left: 1.9rem;
+      top: 8rem;
+      letter-spacing: 0.15rem; }
+    .cards .front-card .line-card {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 1.8rem;
+      position: absolute;
+      bottom: 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+      color: white;
+      letter-spacing: 2px;
+      padding-right: 2.5rem; }
+      .cards .front-card .line-card p {
+        display: block; }
+      .cards .front-card .line-card .cardname {
+        width: 80%;
+        text-transform: uppercase; }
+      .cards .front-card .line-card .cardexp {
+        text-align: right;
+        width: 20%; }
+
+.form {
+  display: block;
+  margin-top: -3.5rem;
+  padding-left: 2.5rem;
+  padding-right: 1.9rem;
+  font-size: 1.4rem;
+  letter-spacing: 2px; }
+
+form {
+  padding: 2rem 1rem 1.5rem 0rem; }
+  form input,
+  form button {
+    display: block;
+    padding: 1.3rem;
+    margin: 0.8rem 0 1.5rem 0;
+    border-radius: 0.8rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem; }
+  form .exp-cvc {
+    display: flex;
+    flex-direction: row; }
+    form .exp-cvc .first {
+      width: 100%; }
+    form .exp-cvc .exp {
+      width: 90%;
+      display: flex;
+      gap: 1rem; }
+
+button {
+  background-color: #21092f;
+  color: white;
+  font-size: 1.8rem;
+  padding: 1.8rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+
+.complete {
+  display: none;
+  padding: 2rem;
+  text-align: center; }
+  .complete img {
+    margin-top: -2rem; }
+  .complete .thankyou {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 2rem 0rem 1rem 0rem; }
+  .complete .message {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem; }
+  .complete button {
+    font-family: "Space Grotesk", "sans-serif";
+    padding: 1.2rem; }
+
+.show {
+  animation: fadeIn 1s ease-in-out 0s 1 forwards; }
+
+.hide {
+  display: none; }
+
+@media (min-width: 500px) and (max-width: 1440px) {
+  body {
+    width: 100vw;
+    height: 100vh; }
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    height: 100vh; }
+  .cards {
+    background-image: url(../assets/bg-main-desktop.png);
+    width: 50%;
+    background-repeat: repeat-y;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .cards .back-card {
+      transform: translateX(80%);
+      width: 45%;
+      min-width: 222px;
+      margin-top: 1.5rem;
+      order: 2; }
+      .cards .back-card img {
+        width: 100%; }
+      .cards .back-card p {
+        top: 42%; }
+    .cards .front-card {
+      width: 85%;
+      border-radius: 1.2rem;
+      position: relative;
+      order: 1;
+      transform: translateX(60%);
+      overflow-y: hidden;
+      position: relative;
+      background-color: none;
+      box-shadow: 5px 8px 30px rgba(0, 0, 0, 0.2);
+      width: 45%;
+      min-width: 222px; }
+      .cards .front-card img {
+        width: 100%; }
+      .cards .front-card #logo {
+        width: 20%;
+        position: absolute;
+        top: 10%;
+        left: 7%; }
+      .cards .front-card .nums {
+        color: white;
+        position: absolute;
+        left: 7%;
+        top: 45%;
+        letter-spacing: 0.15rem;
+        font-size: 70%; }
+      .cards .front-card .line-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1.8rem;
+        position: absolute;
+        bottom: 5%;
+        margin: 0;
+        font-size: 40%;
+        color: white;
+        letter-spacing: 2px;
+        padding-right: 2.5rem; }
+        .cards .front-card .line-card p {
+          display: block; }
+        .cards .front-card .line-card .cardname {
+          width: 80%;
+          text-transform: uppercase; }
+        .cards .front-card .line-card .cardexp {
+          text-align: right;
+          width: 20%; }
+  .form {
+    display: block;
+    margin: auto auto;
+    padding-left: 2.5rem;
+    padding-right: 1.9rem;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden; }
+  form {
+    padding: 2rem 1rem 1.5rem 0rem;
+    width: 65%;
+    min-width: 285px;
+    font-size: 1.2rem;
+    transform: scale(0.9); }
+    form input,
+    form button {
+      display: block;
+      padding: 1rem;
+      margin: 0.8rem 0 1.5rem 0;
+      border-radius: 0.8rem;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 1.3rem; }
+    form .exp-cvc {
+      display: flex;
+      flex-direction: row; }
+      form .exp-cvc .first {
+        width: 100%; }
+      form .exp-cvc .exp {
+        width: 90%;
+        display: flex;
+        gap: 1rem; }
+  button {
+    background-color: #21092f;
+    color: white;
+    font-size: 1.8rem;
+    padding: 1.8rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  .complete {
+    display: block;
+    padding: 2rem;
+    text-align: center; }
+    .complete img {
+      margin-top: -2rem; }
+    .complete .thankyou {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 2rem 0rem 1rem 0rem; }
+    .complete .message {
+      font-size: 1.6rem;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 3rem; }
+    .complete button {
+      font-family: "Space Grotesk", "sans-serif";
+      padding: 1.2rem; }
+  .show {
+    animation: fadeIn 1s ease-in-out 0s 1 forwards; }
+  .hide {
+    display: none; } }
+
+@media (min-width: 600px) and (max-width: 914px) {
+  .cards {
+    width: 60%;
+    margin-left: -10rem;
+    z-index: 2; }
+  .container {
+    background-color: transparent; }
+  .front-card {
+    transform: translateX(-30%); }
+  .back-card {
+    transform: translateX(-30%); }
+  .form {
+    margin: auto auto;
+    padding-left: 5rem;
+    background-color: transparent;
+    width: 50%;
+    min-width: 300px; } }
