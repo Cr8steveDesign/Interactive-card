@@ -104,7 +104,7 @@ body {
 
 .form {
   display: block;
-  margin-top: -4.5rem;
+  margin-top: -7rem;
   padding-left: 2.5rem;
   padding-right: 1.9rem;
   font-size: 1.4rem;
@@ -163,6 +163,11 @@ button {
 
 .hide {
   display: none; }
+
+@media (min-width: 460px) and (max-width: 550px) {
+  .form {
+    display: block;
+    margin-top: 1rem; } }
 
 @media (min-width: 750px) and (max-width: 915px) {
   .cards {
