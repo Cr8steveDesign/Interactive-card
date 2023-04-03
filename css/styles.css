@@ -121,15 +121,23 @@ form {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 1.6rem; }
-  form .exp-cvc {
+  form input:invalid {
+    border: 1px solid red; }
+  form input:invalid::after {
+    content: "Please enter valid code";
+    display: block;
+    color: red;
+    transform: translateY(2px); }
+
+.exp-cvc {
+  display: flex;
+  flex-direction: row; }
+  .exp-cvc .first {
+    width: 100%; }
+  .exp-cvc .exp {
+    width: 90%;
     display: flex;
-    flex-direction: row; }
-    form .exp-cvc .first {
-      width: 100%; }
-    form .exp-cvc .exp {
-      width: 90%;
-      display: flex;
-      gap: 1rem; }
+    gap: 1rem; }
 
 button {
   background-color: #21092f;
@@ -173,14 +181,14 @@ button {
   .cards {
     background-size: cover; } }
 
-@media (min-width: 500px) and (max-width: 1440px) {
+@media (min-width: 500px) and (max-width: 3000px) {
   body {
     width: 100vw;
     height: 100vh; }
   .container {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 1440px;
     width: 100%;
     overflow-x: hidden;
     margin: 0 auto;
